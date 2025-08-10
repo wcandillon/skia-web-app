@@ -1,6 +1,6 @@
+import AnimatedSquareCanvas from "@/components/AnimatedSquareCanvas";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import "react-native-reanimated";
 
 export {
 	// Catch any errors thrown by the Layout component.
@@ -15,13 +15,13 @@ export const unstable_settings = {
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-	return <RootLayoutNav />;
+	return (
+		<RootLayoutNav />
+	);
 }
 
 function RootLayoutNav() {
 	return (
-		<Stack>
-			<Stack.Screen name="Home" />
-		</Stack>
+		<AnimatedSquareCanvas />
 	);
 }

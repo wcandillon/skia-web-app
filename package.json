@@ -7,7 +7,7 @@
 		"android": "expo start --android",
 		"ios": "expo start --ios",
 		"web": "expo start --web",
-		"test": "jest --watchAll"
+		"test": "jest screenshot.test.js --forceExit"
 	},
 	"jest": {
 		"preset": "jest-expo"
@@ -30,13 +30,15 @@
 		"react-native-reanimated": "~3.17.4",
 		"react-native-safe-area-context": "5.4.0",
 		"react-native-screens": "~4.11.1",
-		"react-native-web": "^0.20.0"
+		"react-native-web": "^0.20.0",
+		"sharp": "^0.34.3"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.25.2",
 		"@types/react": "~19.0.10",
 		"jest": "^29.2.1",
 		"jest-expo": "~53.0.7",
+		"puppeteer": "^24.16.0",
 		"react-test-renderer": "18.3.1",
 		"typescript": "~5.8.3"
 	},

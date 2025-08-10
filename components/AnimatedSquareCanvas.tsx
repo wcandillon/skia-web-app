@@ -1,3 +1,4 @@
+import { Fill } from "@shopify/react-native-skia";
 import { Canvas, Rect } from "@shopify/react-native-skia/src";
 import { useEffect, useState } from "react";
 import { Pressable } from "react-native";
@@ -20,10 +21,10 @@ const AnimatedSquareCanvas = () => {
 			-1,
 		);
 	}, [x]);
-	console.log(rects);
 	return (
 		<Pressable onPress={() => setRects(i => i + 1)}>
 			<Canvas style={{ width: "100%", height: "100%" }}>
+				<Rect color="blue" x={0} y={0} width={10} height={10} />
 				{Array.from({ length: rects }).map((_, i) => (
 					<Rect
 						key={i}
