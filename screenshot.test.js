@@ -21,7 +21,7 @@ describe('Web App Screenshot', () => {
   let page;
 
   beforeAll(async () => {
-    const webUrl = 'http://localhost:8082';
+    const webUrl = 'http://localhost:8081';
     console.log(`Using web server at: ${webUrl}`);
 
     browser = await puppeteer.launch({
