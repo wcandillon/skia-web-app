@@ -15,7 +15,7 @@
 	"dependencies": {
 		"@expo/vector-icons": "^14.0.2",
 		"@react-navigation/native": "^7.0.14",
-		"@shopify/react-native-skia": "2.2.3",
+		"@shopify/react-native-skia": "https://github.com/Shopify/react-native-skia/releases/download/v2.2.9/@shopify-react-native-skia-2.2.9.tgz",
 		"expo": "^53.0.0",
 		"expo-font": "~13.3.1",
 		"expo-linking": "~7.1.5",

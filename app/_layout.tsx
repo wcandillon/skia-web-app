@@ -1,4 +1,3 @@
-import AnimatedSquareCanvas from "@/components/AnimatedSquareCanvas";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 
@@ -8,7 +7,7 @@ export {
 } from "expo-router";
 
 export const unstable_settings = {
-	initialRouteName: "Home",
+	initialRouteName: "index",
 };
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -16,12 +15,31 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
 	return (
-		<RootLayoutNav />
-	);
-}
-
-function RootLayoutNav() {
-	return (
-		<AnimatedSquareCanvas />
+		<Stack>
+			<Stack.Screen 
+				name="index" 
+				options={{ 
+					title: "Skia Examples",
+					headerStyle: {
+						backgroundColor: "#fff",
+					},
+					headerTitleStyle: {
+						fontWeight: "bold",
+					},
+				}} 
+			/>
+			<Stack.Screen 
+				name="examples/[id]" 
+				options={{ 
+					title: "Example",
+					headerStyle: {
+						backgroundColor: "#fff",
+					},
+					headerTitleStyle: {
+						fontWeight: "bold",
+					},
+				}} 
+			/>
+		</Stack>
 	);
 }
