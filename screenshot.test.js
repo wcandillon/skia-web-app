@@ -33,10 +33,28 @@ describe('Web App Screenshot', () => {
   }, 60000);
 
   afterAll(async () => {
-    if (browser) {
-      await browser.close();
+    // Close page first
+    if (page) {
+      try {
+        await page.close();
+      } catch (error) {
+        console.error('Error closing page:', error);
+      }
     }
-  });
+    
+    // Then close browser
+    if (browser) {
+      try {
+        await browser.close();
+      } catch (error) {
+        console.error('Error closing browser:', error);
+        // Force kill if normal close fails
+        if (browser.process() !== null) {
+          browser.process().kill('SIGKILL');
+        }
+      }
+    }
+  }, 30000); // Add timeout here
 
   test('should take a screenshot of the web app', async () => {
     try {
