@@ -7,6 +7,16 @@ const examples = [
 		title: "Animated Square Canvas",
 		description: "A simple animated square with Skia Canvas",
 	},
+	{
+		id: "multiple-canvases",
+		title: "Multiple Canvases",
+		description: "20 Skia Canvases with random color fills",
+	},
+	{
+		id: "breathe",
+		title: "Breathe",
+		description: "Animated breathing circles with blur effect",
+	},
 ];
 
 const Home = () => {
