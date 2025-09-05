@@ -20,7 +20,7 @@ const MultipleCanvases = () => {
 			<View style={styles.grid}>
 				{canvases.map((canvas) => (
 					<View key={canvas.id} style={styles.canvasWrapper}>
-						<Canvas style={styles.canvas} __webAnimations={false}>
+						<Canvas style={styles.canvas} __destroyGLContextAfterRender={true}>
 							<Fill color={canvas.color} />
 						</Canvas>
 					</View>
