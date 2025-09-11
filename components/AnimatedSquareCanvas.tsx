@@ -22,7 +22,7 @@ const AnimatedSquareCanvas = () => {
 		);
 	}, [x]);
 	return (
-		<Pressable onPress={() => setRects(i => i + 1)}>
+		<Pressable onPress={() => setRects(i => i + 1)} style={{ flex: 1 }}>
 			<Canvas style={{ width: "100%", height: "100%" }}>
 				<Rect color="blue" x={0} y={0} width={10} height={100} />
 				{Array.from({ length: rects }).map((_, i) => (
