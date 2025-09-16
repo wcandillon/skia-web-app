@@ -17,6 +17,11 @@ const examples = [
 		title: "Breathe",
 		description: "Animated breathing circles with blur effect",
 	},
+	{
+		id: "animated-images",
+		title: "Animated Images",
+		description: "Animated GIF images with pause/play functionality",
+	},
 ];
 
 const Home = () => {

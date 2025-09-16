@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 import AnimatedSquareCanvas from "@/components/AnimatedSquareCanvas";
 import MultipleCanvases from "@/components/MultipleCanvases";
 import Breathe from "@/components/Breathe";
+import AnimatedImages from "@/components/AnimatedImages";
 
 const ExampleScreen = () => {
 	const { id } = useLocalSearchParams<{ id: string }>();
@@ -15,6 +16,8 @@ const ExampleScreen = () => {
 				return <MultipleCanvases />;
 			case "breathe":
 				return <Breathe />;
+			case "animated-images":
+				return <AnimatedImages />;
 			default:
 				return (
 					<View style={styles.container}>
